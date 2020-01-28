@@ -6,21 +6,27 @@
     <e p="E:\SAE\Unity\Pang-Like" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Scripte" t="Include">
-          <e p="Player" t="Include">
-            <e p="Bullet.cs" t="Include" />
-            <e p="PlayerController.cs" t="Include" />
-            <e p="PlayerHealth.cs" t="Include" />
-            <e p="ShooterController.cs" t="Include" />
-            <e p="SO_Shooter.cs" t="Include" />
-          </e>
-          <e p="Sound" t="Include">
-            <e p="SO_Clip.cs" t="Include" />
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="Balls" t="Include">
             <e p="BallsDirection.cs" t="Include" />
+            <e p="BallsLife.cs" t="Include" />
+          </e>
+          <e p="Players" t="Include">
+            <e p="Bullet.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerLife.cs" t="Include" />
+            <e p="ShooterController.cs" t="Include" />
+            <e p="SO_Shooter.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Sprites" t="Include">
+          <e p="Players" t="Include">
+            <e p="SpaceShooterRedux" t="Include">
+              <e p="license.txt" t="Include" />
+              <e p="Spritesheet" t="Include">
+                <e p="sheet.xml" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
       </e>
