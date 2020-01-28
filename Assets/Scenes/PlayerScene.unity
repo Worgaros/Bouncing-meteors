@@ -525,6 +525,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 611588825}
     m_Modifications:
+    - target: {fileID: 8643754161479609236, guid: 2c8d16fcabb141445b48d99648317975,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8643754161479609236, guid: 2c8d16fcabb141445b48d99648317975,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8643754161479609236, guid: 2c8d16fcabb141445b48d99648317975,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8643754161479609237, guid: 2c8d16fcabb141445b48d99648317975,
         type: 3}
       propertyPath: m_Name
@@ -534,7 +549,13 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 611588826}
+    - target: {fileID: 8643754162573039620, guid: 2c8d16fcabb141445b48d99648317975,
+        type: 3}
+      propertyPath: shooter
+      value: 
+      objectReference: {fileID: 11400000, guid: 628bed7a31ca50144b0ab20b6f5889d3,
+        type: 2}
     - target: {fileID: 8643754162573039622, guid: 2c8d16fcabb141445b48d99648317975,
         type: 3}
       propertyPath: m_LocalPosition.x

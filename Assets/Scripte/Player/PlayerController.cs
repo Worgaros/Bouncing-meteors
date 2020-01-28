@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     Vector2 direction;
 
-    [SerializeField] float jumpVelocity = 6;
+    [SerializeField] float jumpVelocity = 1f;
     [SerializeField] float raycastJumpLength = 1f;
 
     [SerializeField] float timeStopJump = 0.1f;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer_;
     bool isLookingRight = true;
 
-    //AudioManager audioManager_;
+    AudioManager audioManager_;
 
     void Start()
     {
@@ -48,9 +48,9 @@ public class PlayerController : MonoBehaviour
 
 
 
-        //audioManager_ = FindObjectOfType<AudioManager>();
+        audioManager_ = FindObjectOfType<AudioManager>();
 
-        //gunController_.SetAudioManager(audioManager_);
+        shooterController_.SetAudioManager(audioManager_);
     }
 
     void FixedUpdate()
@@ -109,14 +109,13 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastJumpLength, 1 << LayerMask.NameToLayer("Platform"));
         canJump = hit.rigidbody != null;
 
-        if (!(Input.GetAxis("Jump") > 0.1f) || !canJump) return;
-
+        /*if (!(Input.GetAxis("Jump") > 0.1f) || !canJump) return;
 
         //audioManager_.PlayWithRandomPitch(jumpClips_[Random.Range(0, jumpClips_.Count)]);
         //animator_.SetTrigger("jump");
         direction.y += jumpVelocity;
         canJump = false;
-        timerStopJump = timeStopJump;
+        timerStopJump = timeStopJump;*/
     }
     public ShooterController GetGun()
     {

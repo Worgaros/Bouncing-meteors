@@ -6,9 +6,9 @@ public class ShooterController : MonoBehaviour
 {
     [SerializeField] SO_Shooter shooter;
 
-    //float shootDelay;
+    float shootDelay;
 
-    SpriteRenderer spriteRenderer;
+        SpriteRenderer spriteRenderer;
 
     [SerializeField] PlayerController player;
 
@@ -19,19 +19,19 @@ public class ShooterController : MonoBehaviour
     [SerializeField] Transform bulletSpawnPoint;
     float currentDelay = 0.0f;
 
-    //[SerializeField] List<SO_Clip> gunShotClips_;
+    [SerializeField] List<SO_Clip> laserShotClips_;
+
+    AudioManager audioManager_;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        //SetNewGun(gun);
     }
 
-    /*public void SetAudioManager(AudioManager audioManager)
+    public void SetAudioManager(AudioManager audioManager)
     {
         audioManager_ = audioManager;
-    }*/
+    }
 
     void Update()
     {
@@ -48,9 +48,6 @@ public class ShooterController : MonoBehaviour
         {
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }*/
-
-
-
         if (currentDelay > 0)
         {
             currentDelay -= Time.deltaTime;
@@ -101,15 +98,15 @@ public class ShooterController : MonoBehaviour
     {
         for (int i = 0; i < shooter.Numb; i++)
         {
-            GameObject bullet = Instantiate(shooter.PrefabBullet, bulletSpawnPoint);
-            bullet.transform.parent = null;
-            bullet.transform.localScale = Vector3.one;
+            GameObject laserGreen = Instantiate(shooter.PrefablaserGreen, bulletSpawnPoint);
+            laserGreen.transform.parent = null;
+            laserGreen.transform.localScale = Vector3.one;
 
-            bullet.transform.position += (Vector3)Random.insideUnitCircle * shooter.Dispertion;
+            laserGreen.transform.position += (Vector3)Random.insideUnitCircle * shooter.Dispertion;
 
-            bullet.GetComponent<Rigidbody2D>().velocity = transform.right * shooter.BulletSpeed;
+            laserGreen.GetComponent<Rigidbody2D>().velocity = transform.right * shooter.BulletSpeed;
 
-            //audioManager_.PlayWithRandomPitch(gunShotClips_[Random.Range(0, gunShotClips_.Count)]);
+            audioManager_.PlayWithRandomPitch(laserShotClips_[Random.Range(0, laserShotClips_.Count)]);
         }
     }
 }

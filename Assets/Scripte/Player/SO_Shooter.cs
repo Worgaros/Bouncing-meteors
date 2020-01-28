@@ -19,7 +19,7 @@ public class SO_Shooter : ScriptableObject
 
     public float BulletSpeed => bulletSpeed;
 
-    public GameObject PrefabBullet => prefabBullet;
+    public GameObject PrefablaserGreen => prefabBullet;
 
     public float Dispertion => dispertion;
 
