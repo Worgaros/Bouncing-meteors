@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallsCounter : MonoBehaviour
 {
     [SerializeField] GameObject panel;
-    int ballsNumber = 12;
+    int ballsNumber = 6;
     
     public void ballsCounter()
     {
