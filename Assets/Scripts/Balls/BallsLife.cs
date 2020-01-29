@@ -8,6 +8,8 @@ public class BallsLife : MonoBehaviour
     
     Rigidbody2D body;
 
+
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -18,6 +20,7 @@ public class BallsLife : MonoBehaviour
         if (other.gameObject.CompareTag("Laser"))
         {
             Destroy(gameObject);
+            GetComponentInParent<BallsCounter>().ballsCounter();
         }
     }
 }
