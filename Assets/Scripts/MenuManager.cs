@@ -10,7 +10,13 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("LevelScene");
+    }
+    
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
     }
    
     public void OpenCredits()

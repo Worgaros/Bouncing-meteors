@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
     Rigidbody2D body;
+    [SerializeField] GameObject panel;
 
     void Start()
     {
@@ -16,7 +17,8 @@ public class PlayerLife : MonoBehaviour
 
         if (other.gameObject.CompareTag("balls"))
         {
-            Destroy(gameObject);
+            Time.timeScale = 0;
+            panel.SetActive(true);
         }
     }
 }

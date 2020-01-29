@@ -51,15 +51,19 @@ public class ShooterController : MonoBehaviour
 
     public void Fire(Transform transform, Transform bulletSpawnPoint)
     {
-        for (int i = 0; i < shooter.Numb; i++)
+        if (Time.timeScale > 0)
         {
-            GameObject laserGreen = Instantiate(shooter.PrefablaserGreen, bulletSpawnPoint);
-            laserGreen.transform.parent = null;
-            laserGreen.transform.localScale = Vector3.one;
-
-            laserGreen.transform.position += (Vector3)Random.insideUnitCircle * shooter.Dispertion;
-
-            laserGreen.GetComponent<Rigidbody2D>().velocity = transform.right * shooter.BulletSpeed;
+            for (int i = 0; i < shooter.Numb; i++)
+                    {
+                        GameObject laserGreen = Instantiate(shooter.PrefablaserGreen, bulletSpawnPoint);
+                        laserGreen.transform.parent = null;
+                        laserGreen.transform.localScale = Vector3.one;
+            
+                        laserGreen.transform.position += (Vector3)Random.insideUnitCircle * shooter.Dispertion;
+            
+                        laserGreen.GetComponent<Rigidbody2D>().velocity = transform.right * shooter.BulletSpeed;
+                    }
         }
+        
     }
 }
