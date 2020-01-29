@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Walls
   - Laser
+  - balls
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 2849355533
+    locked: 0
+  - name: map
+    uniqueID: 1460902347
+    locked: 0
+  - name: player
+    uniqueID: 2338949059
+    locked: 0
+  - name: balls
+    uniqueID: 3683876197
     locked: 0

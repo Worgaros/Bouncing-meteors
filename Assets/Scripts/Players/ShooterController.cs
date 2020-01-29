@@ -6,7 +6,7 @@ public class ShooterController : MonoBehaviour
 {
     [SerializeField] SO_Shooter shooter;
 
-    float shootDelay;
+    [SerializeField] float shootDelay;
 
     [SerializeField] PlayerController player;
 
@@ -24,7 +24,7 @@ public class ShooterController : MonoBehaviour
     {
         if (currentDelay > 0)
         {
-            currentDelay -= Time.deltaTime;
+            currentDelay -= Time.deltaTime * shootDelay;
         }
 
 

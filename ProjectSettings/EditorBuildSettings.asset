@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/GaelScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: 20b79347e0f7aa345a93df5411618dbc
+  - enabled: 1
+    path: Assets/Scenes/LevelScene.unity
+    guid: 127786a463db36045ab73cf111a3c122
   m_configObjects: {}
